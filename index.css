@@ -1,0 +1,153 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700,800,600);
+
+// PRELOADER
+$pre_bg_color: #3fd47d;
+#loading{
+  background-color: $pre_bg_color;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  margin-top: 0px;
+  top: 0px;
+}
+#loading-center{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  }
+#loading-center-absolute {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 20px;
+  width: 100px;
+  margin-top: -10px;
+  margin-left: -50px;
+}
+.object{
+  width: 20px;
+  height: 20px;
+  background-color: #FFF;
+  -moz-border-radius: 50% 50% 50% 50%;
+  -webkit-border-radius: 50% 50% 50% 50%;
+  border-radius: 50% 50% 50% 50%;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  position: absolute; 
+}
+#object_one{
+  -webkit-animation: object 2s linear infinite;
+   animation: object 2s linear infinite;
+   }
+#object_two{ 
+  -webkit-animation: object 2s linear infinite -.4s;
+  animation: object 2s linear infinite -.4s;
+   }
+#object_three{ 
+  -webkit-animation: object 2s linear infinite -.8s; 
+  animation: object 2s linear infinite -.8s; 
+  }
+#object_four{ 
+  -webkit-animation: object 2s linear infinite -1.2s;
+  animation: object 2s linear infinite -1.2s; 
+  } 
+#object_five{ 
+  -webkit-animation: object 2s linear infinite -1.6s; 
+  animation: object 2s linear infinite -1.6s; 
+  }
+@-webkit-keyframes object{
+  0% { left: 100px; top:0}
+  80% { left: 0; top:0;}
+  85% { left: 0; top: -20px; width: 20px; height: 20px;}
+  90% { width: 40px; height: 15px; }
+  95% { left: 100px; top: -20px; width: 20px; height: 20px;}
+  100% { left: 100px; top:0; }    
+}   
+@keyframes object{
+  0% { left: 100px; top:0}
+  80% { left: 0; top:0;}
+  85% { left: 0; top: -20px; width: 20px; height: 20px;}
+  90% { width: 40px; height: 15px; }
+  95% { left: 100px; top: -20px; width: 20px; height: 20px;}
+  100% { left: 100px; top:0; }
+} 
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  background-color: #fff;
+  color: #000;
+}
+h1 {
+  font-weight: 300;
+  font-size: 2.7em;
+  color: #000;
+  @media (min-width:768px) {
+    font-size: 4em;
+  }
+}
+#time {
+  font-size: 1.5em;
+  margin-bottom: 0;
+  @media (min-width:768px) {
+    font-size: 2em;
+  }
+}
+i.wi {
+  font-family: 'Weather Icons';
+  font-style: normal;
+}
+.big-icon {
+  display: inline-block;
+  font-size: 7em;
+  line-height: 1.5;
+  @media (min-width:990px) {
+    margin: 15px;
+    font-size: 14em;
+    line-height: 1;
+  }
+  @media (min-width:768px) {
+    margin: 15px;
+    font-size: 10em;
+    line-height: 1;
+  }
+  
+}
+#daily_temp {
+  text-transform: uppercase;
+  margin: 0; padding: 0;
+  line-height: 1;
+  font-size: 150%;
+  padding-bottom: 50px;
+  @media (min-width:990px) {
+    margin: 30px;
+    font-size: 250%;
+  }
+  @media (min-width:768px) {
+    margin: 30px;
+    font-size: 175%;
+  }
+  p{
+    margin: 0;
+  }
+}
+#current_temp {
+  font-size: 3.6em;
+  font-weight: 700;
+  line-height: 1;
+}
+#extra_info {
+  font-size: 2em;
+  i.wi {
+    @media (min-width:768px) {
+      margin-left: 30px;
+    }
+    &:first-child {
+      margin-left: 0;
+    }
+    &.wi-wind {
+      margin-left: 0;
+    }
+  }
+}
